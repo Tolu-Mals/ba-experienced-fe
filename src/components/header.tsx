@@ -18,13 +18,14 @@ export default function Header({
 				ETH TX Tracker
 			</p>
 			<Select
-				defaultValue="outgoing"
+				defaultValue="all"
 				onValueChange={(value: TransactionType) => setTransactionType(value)}
 			>
 				<SelectTrigger className="w-[120px]">
 					<SelectValue />
 				</SelectTrigger>
 				<SelectContent>
+					<SelectItem value="all">All</SelectItem>
 					<SelectItem value="incoming">Incoming</SelectItem>
 					<SelectItem value="outgoing">Outgoing</SelectItem>
 				</SelectContent>
